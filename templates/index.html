@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servidor Web con OpenCV</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <div>
+                <h2>Imagen Recibida</h2>
+                <img id="receivedImage" src="" alt="Imagen recibida">
+            </div>
+            <div>
+                <h2>Imagen de la Cámara</h2>
+                <img id="cameraFeed" src="/video_feed" alt="Camera Feed">
+                <img id="capturedImage" src="" alt="Imagen capturada" style="display: none;">
+            </div>
+        </div>
+        <div class="button-container">
+            <button id="captureButton" onclick="captureImage()">Capturar Imagen</button>
+            <button id="retakeButton" onclick="retakeImage()" style="display: none;">Tomar Otra Foto</button>
+            <button onclick="fuseImages()">Fusionar Imágenes</button>
+        </div>
+        <h2>Resultado</h2>
+        <div class="result-container">
+            <img id="resultImage" src="" alt="Imagen fusionada">
+        </div>
+    </div>
+    <script src="../static/script.js"></script> 
+</body>
+</html>
